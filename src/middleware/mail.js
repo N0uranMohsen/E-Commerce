@@ -6,8 +6,8 @@ export const sendEmail = async (email) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "nouranmohsen720@gmail.com",
-      pass: "ptbaewyynoaoofzc",
+      user:process.env.EMAIL,
+      pass: process.env.PASS,
     },
     tls: {
       rejectUnauthorized: false, // Ignore self-signed certificate errors
